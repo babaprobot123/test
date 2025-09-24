@@ -1,0 +1,92 @@
+            Console.Title = "emir.exe";
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+            string ascii_art = @" ooo        ooooo   .oooooo.     .oooooo.   oooooooooooo oooooooooooo 
+ `88.       .888'  d8P'  `Y8b   d8P'  `Y8b    d'""""""d888' `888'     `8 
+  888b     d'888  888      888 888      888      .888P    888         
+  8 Y88. .P  888  888      888 888      888     d888'     888oooo8    
+  8  `888'   888  888      888 888      888   .888P       888    
+  8    Y     888  `88b     d88'`88b    d88'  d888'    .P  888       o 
+ o8o        o888o  `Y8bood8P'   `Y8bood8P' .8888888888P  o888ooooood8";
+
+            Console.WriteLine(ascii_art);
+
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("  (");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("-");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(") Key:");
+            string answer = Console.ReadLine();
+            for (int i = 0; i < 100; i++)
+            {
+                Console.Write(answer);
+                Thread.Sleep(10);
+            }
+            Console.Clear();
+
+
+            Console.Write(ascii_art);
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("  (");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("-");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(") Authenticating . . . ");
+            Task.Run(() => SimulateAuthentication());
+
+            Console.ReadLine();
+        }
+
+        static void SimulateAuthentication()
+        {
+            
+            System.Threading.Thread.Sleep(3000);
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+            string ascii_art = @" ooo        ooooo   .oooooo.     .oooooo.   oooooooooooo oooooooooooo 
+ `88.       .888'  d8P'  `Y8b   d8P'  `Y8b    d'""""""d888' `888'     `8 
+  888b     d'888  888      888 888      888      .888P    888         
+  8 Y88. .P  888  888      888 888      888     d888'     888oooo8    
+  8  `888'   888  888      888 888      888   .888P       888    
+  8    Y     888  `88b     d88'`88b    d88'  d888'    .P  888       o 
+ o8o        o888o  `Y8bood8P'   `Y8bood8P' .8888888888P  o888ooooood8";
+
+            Console.Write(ascii_art);
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("  (");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("-");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write(") Exiting in: ");
+
+            
+            double countdown = 5.00;
+
+            while (countdown >= 0.00)
+            {
+                Console.SetCursorPosition(0, Console.CursorTop);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write($"  (-) Hiding console in: {countdown:F2} seconds"); 
+                Thread.Sleep(10);  
+
+                countdown -= 0.01; 
+            }
+
+           
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\nConsole is closing... Goodbye!");
+
+            
+            Environment.Exit(0);
